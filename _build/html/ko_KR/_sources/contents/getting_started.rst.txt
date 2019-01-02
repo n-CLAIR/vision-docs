@@ -94,56 +94,46 @@ Path registration
 Run a session
 -------------
 
-    이번 해커톤 대회에서 nsml run을 할 때는 dataset을 -d 옵션으로 반드시 지정해야 합니다. dataset의 이름이 ir_ph1이며 ``-d ir_ph1`` 로 지정합니다.
+    nsml run을 할 때는 dataset을 -d 옵션으로 반드시 지정해야 합니다. dataset의 이름은 ir_ph1이며 ``-d ir_ph1`` 로 지정합니다. ``-e main.py`` 로 entry 파일(시작 파일)를 옵션으로 같이 지정할 수 있습니다.
 
     .. code-block:: console
 
-        nsml run -d ir_ph1
+        nsml run -d ir_ph1 -e main.py
 
 
-    아래 예제에서는 `nsml-examples`_  예제코드와 ``hello_nsml`` dataset를 사용합니다.
-    대회와는 상관 없이 nsml의 명령어와 session의 개념을 익히기 위해 사용하실 수 있습니다.
-    :ref:`nsml run <nsml run>` 을 이용해 실행해 보겠습니다.
-    Github의 example 레파지토리를 먼저 clone합니다.
-
-
-    .. _nsml-examples: https://github.com/n-CLAIR/nsml-hack-examples
+    아래 예제에서는 이번 AiHackathon2018의 baseline code를 실행시켜보겠습니다.
+    :ref:`nsml run <nsml run>` 을 이용합니다.
+    
+    Github의 baseline 레파지토리를 먼저 clone합니다.
 
     .. code-block:: console
 
-        $ git clone git@github.com:n-CLAIR/nsml-hack-examples.git
-        Cloning into 'nsml-hack-examples'...
-        remote: Enumerating objects: 92, done.
-        remote: Counting objects: 100% (92/92), done.
-        remote: Compressing objects: 100% (76/76), done.
-        remote: Total 92 (delta 12), reused 92 (delta 12), pack-reused 0
-        Receiving objects: 100% (92/92), 958.63 KiB | 284.00 KiB/s, done.
-        Resolving deltas: 100% (12/12), done.
+        $ git clone git clone git@github.com:AiHackathon2018/AI-Vision.git
+        Cloning into 'AI-Vision'...
+        remote: Enumerating objects: 43, done.
+        remote: Total 43 (delta 0), reused 0 (delta 0), pack-reused 43
+        Receiving objects: 100% (43/43), 17.97 KiB | 3.59 MiB/s, done.
+        Resolving deltas: 100% (14/14), done.
 
-        $ cd nsml-hack-examples/01.Basic/01_hello_nsml/
-
-        $ ls
-        abc.abc  dataset/  main.py  prepare_dataset.sh  README.md  setup.py
-
-        $ nsml run -d hello_nsml
-        INFO[2018/11/19 16:35:44.284] file integrity check - start
-        INFO[2018/11/19 16:35:44.285] file integrity check - done
-        INFO[2018/11/19 16:35:44.285] README.md 333 B - start
-        INFO[2018/11/19 16:35:44.285] README.md 333 B - done (1/6 16.67%) (333 B/19 KiB 1.69%)
-        INFO[2018/11/19 16:35:44.285] abc.abc 18 KiB - start
-        INFO[2018/11/19 16:35:44.286] abc.abc 18 KiB - done (2/6 33.33%) (18 KiB/19 KiB 95.16%)
-        INFO[2018/11/19 16:35:44.286] dataset/data.txt 12 B - start
-        INFO[2018/11/19 16:35:44.286] dataset/data.txt 12 B - done (3/6 50.00%) (18 KiB/19 KiB 95.22%)
-        INFO[2018/11/19 16:35:44.286] main.py 530 B - start
-        INFO[2018/11/19 16:35:44.286] main.py 530 B - done (4/6 66.67%) (19 KiB/19 KiB 97.91%)
-        INFO[2018/11/19 16:35:44.286] prepare_dataset.sh 149 B - start
-        INFO[2018/11/19 16:35:44.287] prepare_dataset.sh 149 B - done (5/6 83.33%) (19 KiB/19 KiB 98.67%)
-        INFO[2018/11/19 16:35:44.287] setup.py 263 B - start
-        INFO[2018/11/19 16:35:44.287] setup.py 263 B - done (6/6 100.00%) (19 KiB/19 KiB 100.00%)
+        $ nsml run -d ir_ph1 -e main.py
+        INFO[2019/01/02 16:11:20.959] .nsmlignore check - start
+        INFO[2019/01/02 16:11:20.959] .nsmlignore check - done
+        INFO[2019/01/02 16:11:20.996] file integrity check - start
+        INFO[2019/01/02 16:11:20.998] file integrity check - done
+        INFO[2019/01/02 16:11:21.001] .nsmlignore 16 B - start
+        INFO[2019/01/02 16:11:21.001] .nsmlignore 16 B - done (1/5 20.00%) (16 B/18 KiB 0.09%)
+        INFO[2019/01/02 16:11:21.001] README.md 9.1 KiB - start
+        INFO[2019/01/02 16:11:21.001] README.md 9.1 KiB - done (2/5 40.00%) (9.2 KiB/18 KiB 50.32%)
+        INFO[2019/01/02 16:11:21.001] data_loader.py 1.5 KiB - start
+        INFO[2019/01/02 16:11:21.002] data_loader.py 1.5 KiB - done (3/5 60.00%) (11 KiB/18 KiB 58.57%)
+        INFO[2019/01/02 16:11:21.002] main.py 7.3 KiB - start
+        INFO[2019/01/02 16:11:21.002] main.py 7.3 KiB - done (4/5 80.00%) (18 KiB/18 KiB 98.81%)
+        INFO[2019/01/02 16:11:21.002] setup.py 221 B - start
+        INFO[2019/01/02 16:11:21.002] setup.py 221 B - done (5/5 100.00%) (18 KiB/18 KiB 100.00%)
         .....
         Building docker image. It might take for a while
-        .........
-        Session nsmlteam/hello_nsml/1 is started
+        ......
+        Session nsmlteam/ir_ph1/1 is started
 
 
     지금까지 NSML의 기본 사용법을 알아보았습니다.  다음 파트부터는 NSML에서 사용하는 명령어들을 알아보겠습니다.

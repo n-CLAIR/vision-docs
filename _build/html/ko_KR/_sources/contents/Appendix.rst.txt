@@ -28,7 +28,7 @@ Policy
     한 유저가 동시에 실행 가능한 GPU의 최대 개수는 남은 credit에 따라 달라집니다.
 
     **<credit 제공 rule>**
-      한 팀에 1시간 단위로 122 credit이 주어집니다. credit을 다 사용하면 3일이 되어야 122 credit * 24(시간) * 3(일) = 8784 credit이 최대치로 주어집니다. 8784 credit이 max로 채워지면 더 이상 credit이 주어지지 않습니다.
+      한 팀에 1시간 단위로 120 credit이 주어집니다. 2880 credit을 max로 사용하실 수 있고, 2880 credit이 채워지면 더 이상 credit이 주어지지 않습니다.
 
 
 
