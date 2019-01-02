@@ -12,11 +12,6 @@ Welcome to NSML Documentation
 
     이 문서에서는 여러분들이 NSML에 친숙해질 수 있도록 다양한 정보를 안내하고 있습니다. NSML 개념, 명령어, 주의 사항들을 알아보실 수 있습니다. NSML이 여러분들의 해커톤 대회 기간 동안 큰 도움이 되길 바랍니다.
 
-Notes
-=====
-
-    - NSML Intro: :download:`NSML Intro.pdf<static/NSML_intro.pdf>`
-
 
 NSML Intro
 =============
