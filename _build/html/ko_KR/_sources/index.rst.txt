@@ -15,8 +15,6 @@ Welcome to NSML Documentation
 Notes
 =====
 
-    - NSML에서 사용되는 예제 코드: https://github.com/n-CLAIR/nsml-hack-examples
-
     - NSML Intro: :download:`NSML Intro.pdf<static/NSML_intro.pdf>`
 
 
@@ -37,7 +35,7 @@ Session and model
 Prerequisites and User Interface
 ---------------------------------
 
-    NSML을 사용하기 위해선 숙지해야 할 준비물 2가지와 User Interface 2가지를 소개합니다.
+    NSML을 사용하기 위해 숙지해야 할 준비물 2가지와 User Interface 2가지를 소개합니다.
 
     .. figure:: ./static/things_to_prepare.png
 
