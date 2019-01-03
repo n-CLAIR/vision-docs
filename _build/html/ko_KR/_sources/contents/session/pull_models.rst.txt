@@ -14,4 +14,4 @@ Pull models
     Example:
         .. code-block:: console
 
-            nsml model pull nsmlteam/ir_ph1/4 24 ./
+            nsml model pull nsmlteam/ir_ph1_v2/4 24 ./

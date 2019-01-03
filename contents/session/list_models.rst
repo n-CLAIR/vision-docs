@@ -14,7 +14,7 @@ list models
     Example:
         .. code-block:: console
 
-            nsml model ls -j nsmlteam/ir_ph1/4
+            nsml model ls -j nsmlteam/ir_ph1_v2/4
 
     Options:
         -j, --json-return       json format 으로 출력합니다.

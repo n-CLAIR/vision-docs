@@ -15,7 +15,7 @@ Run a session
     Example:
         .. code-block:: console
 
-            nsml run -d ir_ph1
+            nsml run -d ir_ph1_v2
 
         -d 옵션을 설정하여 dataset을 꼭 지정해주셔야 합니다.
 

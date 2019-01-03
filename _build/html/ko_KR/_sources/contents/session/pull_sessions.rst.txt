@@ -14,7 +14,7 @@ Pull sessions
     Example:
         .. code-block:: console
 
-            nsml pull -v nsmlteam/ir_ph1/4 ./
+            nsml pull -v nsmlteam/ir_ph1_v2/4 ./
 
     Options:
         -v, --verbose         상세한 진행과정을 표시합니다.

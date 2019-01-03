@@ -15,11 +15,11 @@ Show leaderboard of dataset
         .. code-block:: console
             :caption: Basic command
 
-            nsml dataset board ir_ph1
+            nsml dataset board ir_ph1_v2
 
         .. code-block:: console
 
-            nsml dataset board -j ir_ph1
+            nsml dataset board -j ir_ph1_v2
 
     Options:
         -j, --json-return

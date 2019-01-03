@@ -15,7 +15,7 @@ Get a log from session
     Example:
         .. code-block:: console
 
-            nsml logs -f nsmlteam/ir_ph1/4
+            nsml logs -f nsmlteam/ir_ph1_v2/4
 
     Options:
         -f, --follow        session 이 종료될 때까지 log 를 streaming 합니다.

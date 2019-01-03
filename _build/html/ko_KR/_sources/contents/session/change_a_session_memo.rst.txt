@@ -14,4 +14,4 @@ Change a session memo
     Example:
         .. code-block:: console
 
-            nsml memo nsmlteam/ir_ph1/4 "First trial"
+            nsml memo nsmlteam/ir_ph1_v2/4 "First trial"

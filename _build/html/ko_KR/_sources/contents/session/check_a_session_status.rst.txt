@@ -27,6 +27,6 @@ Check a session status
 
         -d, --data dataset     Session 을 dataset으로 filtering하여 보여줍니다.
         
-                              ex) nsml ps -d ir_ph1
+                              ex) nsml ps -d ir_ph1_v2
 
         -s, --search           해당하는 session만 보여줍니다. ex) nsml ps -s SESSION

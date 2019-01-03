@@ -196,13 +196,13 @@
 <dt>Description:</dt>
 <dd>하나 또는 여러 개의 model 을 삭제합니다. 생성된 CHECKPOINT 번호를 입력합니다. 정규식의 * 와 ? 를 이용하면 여러 개의 model을 삭제할 수 있습니다.</dd>
 <dt>Example:</dt>
-<dd><div class="first highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nsml model rm nsmlteam/ir_ph1/4 24</span>
+<dd><div class="first highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nsml model rm nsmlteam/ir_ph1_v2/4 24</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nsml model rm nsmlteam/ir_ph1/4 &quot;24&quot;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nsml model rm nsmlteam/ir_ph1_v2/4 &quot;24&quot;</span>
 </pre></div>
 </div>
-<div class="last highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model ls nsmlteam/ir_ph1/4
+<div class="last highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model ls nsmlteam/ir_ph1_v2/4
 <span class="go">Checkpoint    Last Modified    Elapsed    Summary                                                                  Size</span>
 <span class="go">------------  ---------------  ---------  -----------------------------------------------------------------------  ---------</span>
 <span class="go">29            4 hours ago      70.171     step=29, test/loss=0.031099648046493532, test/accuracy=0.9892, epoch=29  175.81 KB</span>
@@ -210,8 +210,8 @@
 <span class="go">49            4 hours ago      64.250     step=49, test/loss=0.02667991955280304, test/accuracy=0.9906, epoch=49   175.81 KB</span>
 <span class="go">59            4 hours ago      69.031     step=59, test/loss=0.026230290055274965, test/accuracy=0.9913, epoch=59  175.81 KB</span>
 <span class="go">69            4 hours ago      68.230     step=69, test/loss=0.027098055839538573, test/accuracy=0.9915, epoch=69  175.81 KB</span>
-<span class="gp">$</span> nsml model rm nsmlteam/ir_ph1/4 <span class="m">2</span>*
-<span class="gp">$</span> nsml model ls nsmlteam/ir_ph1/4
+<span class="gp">$</span> nsml model rm nsmlteam/ir_ph1_v2/4 <span class="m">2</span>*
+<span class="gp">$</span> nsml model ls nsmlteam/ir_ph1_v2/4
 <span class="go">Checkpoint    Last Modified    Elapsed    Summary                                                                  Size</span>
 <span class="go">------------  ---------------  ---------  -----------------------------------------------------------------------  ---------</span>
 <span class="go">39            4 hours ago      60.381     step=39, test/loss=0.02888070044517517, test/accuracy=0.9904, epoch=39   175.81 KB</span>

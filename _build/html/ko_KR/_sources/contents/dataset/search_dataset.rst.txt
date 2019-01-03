@@ -21,4 +21,4 @@ Search dataset
     Example:
         .. code-block:: console
 
-            nsml dataset search ir_ph1
+            nsml dataset search ir_ph1_v2

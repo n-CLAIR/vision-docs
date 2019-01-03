@@ -13,11 +13,11 @@ Submit a session
     Example:
         .. code-block:: console
 
-            nsml submit nsmlteam/ir_ph1/4 32
+            nsml submit nsmlteam/ir_ph1_v2/4 32
 
         .. code-block:: console
 
-            nsml submit -t nsmlteam/ir_ph1/4 32
+            nsml submit -t nsmlteam/ir_ph1_v2/4 32
 
     Options:
         -t, --test
