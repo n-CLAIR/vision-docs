@@ -1,0 +1,92 @@
+.. _model capacity:
+
+Model Capacity Management
+==========================
+
+    NSML은 다른 해커톤 참여자들과 함께 사용하는 공간입니다. 모델 저장에 과도한 용량을 사용하면 다른 참여자에게 피해를 주는 상황을 초래할 수 있습니다.
+
+    submit을 시도했거나 더 이상 필요하지 않은 모델은 계속 삭제하여 총 모델 용량을 관리해주시기 바랍니다.
+
+
+Step 1. 삭제할 모델 조회하기
+-----------------------------------
+
+    +---------------------------------+
+    | **nsml model ls** SESSION_NAME  |
+    +---------------------------------+
+
+    각 모델의 사이즈는 맨 오른쪽 Size 열에서 확인하실 수 있습니다.
+
+    .. code-block:: console
+
+        $ nsml model ls nsmlteam/ir_ph1_v2/4
+        Checkpoint    Last Modified    Elapsed    Summary                           Size
+        ------------  ---------------  ---------  --------------------------------  ---------
+        0             32 minutes ago   3.785      epoch=0, loss=7.015200052175436   366.74 MB
+        1             31 minutes ago   25.032     epoch=1, loss=6.762363957929182   366.74 MB
+        2             31 minutes ago   24.942     epoch=2, loss=6.377185855899845   366.74 MB
+        3             30 minutes ago   25.053     epoch=3, loss=5.742813685992816   366.74 MB
+        4             30 minutes ago   24.971     epoch=4, loss=4.847646936640009   366.74 MB
+        11            29 minutes ago   25.032     epoch=1, loss=6.762363957929182   366.74 MB
+        21            29 minutes ago   24.942     epoch=2, loss=6.377185855899845   366.74 MB
+        31            28 minutes ago   25.053     epoch=3, loss=5.742813685992816   366.74 MB
+        41            28 minutes ago   24.971     epoch=4, loss=4.847646936640009   366.74 MB
+
+
+Step 2. 모델 삭제하기 & 확인하기
+---------------------------------------------
+
+    +-----------------------------------------------+
+    | **nsml model rm** SESSION_NAME *CHECKPOINT*   |
+    +-----------------------------------------------+
+
+    모델을 삭제하고, 원하는 대로 삭제가 되었는지 확인하시기 바랍니다.
+
+    Example:
+        .. code-block:: console
+            :caption: 1개 삭제하기
+
+            $ nsml model rm nsmlteam/ir_ph1_v2/4 0
+            $ nsml model ls nsmlteam/ir_ph1_v2/4
+            Checkpoint    Last Modified    Elapsed    Summary                         Size
+            ------------  ---------------  ---------  -------------------------------  ---------
+            1             31 minutes ago   25.032     epoch=1, loss=6.762363957929182  366.74 MB
+            2             31 minutes ago   24.942     epoch=2, loss=6.377185855899845  366.74 MB
+            3             30 minutes ago   25.053     epoch=3, loss=5.742813685992816  366.74 MB
+            4             30 minutes ago   24.971     epoch=4, loss=4.847646936640009  366.74 MB
+            11            29 minutes ago   25.032     epoch=1, loss=6.762363957929182  366.74 MB
+            21            29 minutes ago   24.942     epoch=2, loss=6.377185855899845  366.74 MB
+            31            28 minutes ago   25.053     epoch=3, loss=5.742813685992816  366.74 MB
+            41            28 minutes ago   24.971     epoch=4, loss=4.847646936640009  366.74 MB
+
+
+        .. code-block:: console
+            :caption: 정규표현식 * ?으로 여러 개 삭제하기
+
+            $ nsml model rm nsmlteam/ir_ph1_v2/4 *1
+            $ nsml model ls nsmlteam/ir_ph1_v2/4
+            Checkpoint    Last Modified    Elapsed    Summary                         Size
+            ------------  ---------------  ---------  -------------------------------  ---------
+            0             32 minutes ago   3.785      epoch=0, loss=7.015200052175436  366.74 MB
+            1             31 minutes ago   25.032     epoch=1, loss=6.762363957929182  366.74 MB
+            2             31 minutes ago   24.942     epoch=2, loss=6.377185855899845  366.74 MB
+            3             30 minutes ago   25.053     epoch=3, loss=5.742813685992816  366.74 MB
+            4             30 minutes ago   24.971     epoch=4, loss=4.847646936640009  366.74 MB
+
+            $ nsml model rm nsmlteam/ir_ph1_v2/4 ?1
+            $ nsml model ls nsmlteam/ir_ph1_v2/4
+            Checkpoint    Last Modified    Elapsed    Summary                         Size
+            ------------  ---------------  ---------  -------------------------------  ---------
+            0             32 minutes ago   3.785      epoch=0, loss=7.015200052175436  366.74 MB
+            2             31 minutes ago   24.942     epoch=2, loss=6.377185855899845  366.74 MB
+            3             30 minutes ago   25.053     epoch=3, loss=5.742813685992816  366.74 MB
+            4             30 minutes ago   24.971     epoch=4, loss=4.847646936640009  366.74 MB
+
+
+        .. code-block:: console
+            :caption: 모두 삭제하기
+
+            $ nsml model rm nsmlteam/ir_ph1_v2/4 *
+            $ nsml model ls nsmlteam/ir_ph1_v2/4
+            Checkpoint    Last Modified    Elapsed    Summary                         Size
+            ------------  ---------------  ---------  ------------------------------  ---------

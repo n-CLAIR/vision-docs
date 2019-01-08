@@ -56,6 +56,14 @@ Getting Started
 
     contents/getting_started
 
+Model Capacity Management
+==========================
+
+.. toctree::
+    :maxdepth: 1
+
+    contents/model_capacity_management
+
 Dataset
 =======
 
