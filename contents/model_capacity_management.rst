@@ -86,7 +86,7 @@ Step 2. 모델 삭제하기 & 확인하기
         .. code-block:: console
             :caption: 모두 삭제하기
 
-            $ nsml model rm nsmlteam/ir_ph1_v2/4 *
+            $ nsml model rm nsmlteam/ir_ph1_v2/4 "*"
             $ nsml model ls nsmlteam/ir_ph1_v2/4
             Checkpoint    Last Modified    Elapsed    Summary                         Size
             ------------  ---------------  ---------  ------------------------------  ---------
