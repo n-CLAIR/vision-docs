@@ -256,10 +256,19 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper last docutils container" id="id3">
+<div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text">모두 삭제하기</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model rm nsmlteam/ir_ph1_v2/4 <span class="s2">&quot;*&quot;</span>
 <span class="gp">$</span> nsml model ls nsmlteam/ir_ph1_v2/4
+<span class="go">Checkpoint    Last Modified    Elapsed    Summary                         Size</span>
+<span class="go">------------  ---------------  ---------  ------------------------------  ---------</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper last docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">1번부터 35번 session 안에 있는 model을 전부 삭제하는 bash script</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">1</span> <span class="m">35</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> nsml model rm nsmlteam/ir_ph1_v2/<span class="nv">$i</span> <span class="s2">&quot;*&quot;</span> <span class="p">;</span> <span class="k">done</span>
+<span class="gp">$</span> nsml model ls nsmlteam/ir_ph1_v2/35
 <span class="go">Checkpoint    Last Modified    Elapsed    Summary                         Size</span>
 <span class="go">------------  ---------------  ---------  ------------------------------  ---------</span>
 </pre></div>

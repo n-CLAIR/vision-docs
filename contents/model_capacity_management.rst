@@ -90,3 +90,11 @@ Step 2. 모델 삭제하기 & 확인하기
             $ nsml model ls nsmlteam/ir_ph1_v2/4
             Checkpoint    Last Modified    Elapsed    Summary                         Size
             ------------  ---------------  ---------  ------------------------------  ---------
+
+        .. code-block:: console
+            :caption: 1번부터 35번 session 안에 있는 model을 전부 삭제하는 bash script
+
+            $ for i in `seq 1 35`; do nsml model rm nsmlteam/ir_ph1_v2/$i "*" ; done
+            $ nsml model ls nsmlteam/ir_ph1_v2/35
+            Checkpoint    Last Modified    Elapsed    Summary                         Size
+            ------------  ---------------  ---------  ------------------------------  ---------
