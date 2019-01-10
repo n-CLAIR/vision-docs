@@ -5,13 +5,7 @@ Recovery
 
     #. 모델을 기존 세션에서 받아와야 할 경우
 
-        - :ref:`nsml download<nsml download>` 로 세션에 접근해서 모델을 가져오고, :ref:`nsml run<nsml run>` 할 때 모델과 코드를 같이 올린 후 코드 안에서 가져온 모델을 load한 후 세션을 실행시킵니다.
-
-    #. 모델이 NSML server에 저장되어있고, 이를 불러올 경우
-
         - 코드 안에서 :ref:`nsml.load<nsml.load()>` 로 대상 세션의 모델을 불러올 수 있습니다.
-
-        - :ref:`nsml model pull<nsml model pull>` 로 저장된 모델을 가져온 후 1번과 같이 복구할 수 있습니다.
 
     #. NSML 명령어를 사용하여 세션을 재생성할 수 있을 경우
 

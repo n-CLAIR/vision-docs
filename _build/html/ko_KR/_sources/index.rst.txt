@@ -64,6 +64,14 @@ Model Capacity Management
 
     contents/model_capacity_management
 
+Model Capacity Management
+==========================
+
+.. toctree::
+    :maxdepth: 1
+
+    contents/load_model
+
 Dataset
 =======
 
