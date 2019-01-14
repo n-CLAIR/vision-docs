@@ -48,69 +48,65 @@ Prerequisites and User Interface
     - :guilabel:`Web interface` : session들의 진행 상황과 visualization을 확인할 수 있습니다. https://hack.nsml.navercorp.com 으로 접속하시면 됩니다.
 
 
-Getting Started
-===============
+.. <br />
+.. <br />
+.. <br />
+
+그럼 이제 다음 페이지에서 NSML 사용법을 알아보겠습니다.
+
+
 
 .. toctree::
     :maxdepth: 1
+    :hidden:
 
     contents/getting_started
 
-Model Capacity Management
-==========================
 
 .. toctree::
     :maxdepth: 1
+    :hidden:
 
     contents/model_capacity_management
 
-Model Capacity Management
-==========================
 
 .. toctree::
     :maxdepth: 1
+    :hidden:
 
     contents/load_model
 
-Dataset
-=======
 
 .. toctree::
     :maxdepth: 1
+    :hidden:
 
     contents/dataset/dataset
 
 
-Session
-=======
-
 .. toctree::
     :maxdepth: 1
+    :hidden:
 
     contents/session
 
-NSML library
-============
 
 .. toctree::
     :maxdepth: 1
+    :hidden:
 
     contents/nsml_library/nsml_library
 
 
-Web interface
-=============
-
 .. toctree::
     :maxdepth: 1
+    :hidden:
 
     contents/web_interface/web_interface
 
 
-Appendix
-=============
-
 .. toctree::
     :maxdepth: 1
+    :hidden:
 
     contents/Appendix
