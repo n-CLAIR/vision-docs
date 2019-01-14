@@ -22,12 +22,12 @@ Fork a session
     Example:
         .. code-block:: console
 
-            nsml fork -v nsmlteam/ir_ph1_v2/4
+            nsml fork nsmlteam/ir_ph1_v2/4
 
     Options:
         -a, --args                  새로운 session 에 전달할 arguments 입니다.
 
-                                    ex) nsml fork -a "--batch=1000, --lr=0.02" SESSION_NAME
+                                    ex) nsml fork -a "--batch=1000 --lr=0.02" SESSION_NAME
 
         -c, --checkpoint            fork한 세션에서 불러올 모델의 checkpoint 를 지정합니다.
 
@@ -36,7 +36,7 @@ Fork a session
         -g, --gpus                  할당받을 gpu 의 갯수를 입력합니다.
 
                                     ex) nsml fork -g 4 SESSION_NAME
-                                    
+
         --shm-size string           필요한 share memory 사이즈입니다. (default '1G')
 
         --memory string             필요한 memory 사이즈입니다. (default '24G')
