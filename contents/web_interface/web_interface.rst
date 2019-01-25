@@ -12,4 +12,4 @@ Web interface
         check_log
         check_session_diff
         graph
-        usage_of_gpus
+        usage_of_resources

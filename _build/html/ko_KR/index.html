@@ -181,6 +181,7 @@
 <blockquote>
 <div><p>NSML에서는 session이라는 개념이 계속 등장합니다. 여러분의 코드가 실행되는 하나의 작업 단위를 <code class="docutils literal notranslate"><span class="pre">session</span></code> 이라 부릅니다. 그리고 하나의 session 안에서는 여러 개의 <code class="docutils literal notranslate"><span class="pre">model</span></code> 을 run(진행)하면서 여러분들이 원하는 AI 작업을 수행합니다. 이 모델들은 <code class="docutils literal notranslate"><span class="pre">checkpoint</span></code> 라는 번호로 구분되어 계속 저장됩니다.</p>
 <p>NSML을 돌릴 때 local에서 만든 file(entry file 포함)에서 <a class="reference internal" href="contents/nsml_library/nsml_save.html#nsml-save"><span class="std std-ref">nsml.save</span></a> 라는 함수를 사용할 때마다 checkpoint가 생성됩니다. 또는 세션이 진행되는 도중에 web interface에서 save 버튼을 누를 때마다 checkpoint가 생성됩니다.</p>
+<p>1개의 <code class="docutils literal notranslate"><span class="pre">session</span></code> 별로 여러분은 GPU, CPU, RAM을 할당하실 수 있습니다. 이 자원들을 너무 많이 할당받아서 사용한다면 다른 사용자들이 사용할 수 없게 되므로 session status를 늘 확인하셔서 적절한 자원을 할당받아야 합니다. GPU를 할당받고 실행 중이지만 1시간 동안 사용량이 0인 GPU가 1개라도 존재하는 경우, 상태가 zombie로 표시됩니다. zombie 상태가 되지 않도록 주의해주시기 바랍니다. GPU를 다시 사용한다면 <code class="docutils literal notranslate"><span class="pre">session</span></code> 은 zombie 상태에서 벗어납니다.</p>
 </div></blockquote>
 </div>
 <div class="section" id="prerequisites-and-user-interface">

@@ -45,7 +45,32 @@ Step 2. 모델 삭제하기 & 확인하기
     Example:
 
         .. code-block:: console
-            :caption: 1개 세션에 있는 모델 모두 삭제하기
+            :caption: 정규표현식 *으로 여러 개 삭제하기. 위 nsmlteam/ir_ph1_v2/4 세션에서 checkpoint가 1로 끝나는 모델 지우기
+
+            $ nsml model rm nsmlteam/ir_ph1_v2/4 *1
+            $ nsml model ls nsmlteam/ir_ph1_v2/4
+            Checkpoint    Last Modified    Elapsed    Summary                         Size
+            ------------  ---------------  ---------  -------------------------------  ---------
+            0             32 minutes ago   3.785      epoch=0, loss=7.015200052175436  366.74 MB
+            1             31 minutes ago   25.032     epoch=1, loss=6.762363957929182  366.74 MB
+            2             31 minutes ago   24.942     epoch=2, loss=6.377185855899845  366.74 MB
+            3             30 minutes ago   25.053     epoch=3, loss=5.742813685992816  366.74 MB
+            4             30 minutes ago   24.971     epoch=4, loss=4.847646936640009  366.74 MB
+
+        .. code-block:: console
+            :caption: 정규표현식 ?으로 여러 개 삭제하기. 위 nsmlteam/ir_ph1_v2/4 세션에서 1을 포함한 checkpoint가 1로 끝나는 모델 지우기
+
+            $ nsml model rm nsmlteam/ir_ph1_v2/4 ?1
+            $ nsml model ls nsmlteam/ir_ph1_v2/4
+            Checkpoint    Last Modified    Elapsed    Summary                         Size
+            ------------  ---------------  ---------  -------------------------------  ---------
+            0             32 minutes ago   3.785      epoch=0, loss=7.015200052175436  366.74 MB
+            2             31 minutes ago   24.942     epoch=2, loss=6.377185855899845  366.74 MB
+            3             30 minutes ago   25.053     epoch=3, loss=5.742813685992816  366.74 MB
+            4             30 minutes ago   24.971     epoch=4, loss=4.847646936640009  366.74 MB
+
+        .. code-block:: console
+            :caption: 해당 세션에 있는 모델 모두 삭제하기
 
             $ nsml model rm nsmlteam/ir_ph1_v2/4 "*"
             $ nsml model ls nsmlteam/ir_ph1_v2/4
@@ -53,7 +78,7 @@ Step 2. 모델 삭제하기 & 확인하기
             ------------  ---------------  ---------  ------------------------------  ---------
 
         .. code-block:: console
-            :caption: 1번부터 35번 session에 있는 model을 전부 bash script로 삭제하기
+            :caption: session에 있는 1번부터 35번 model을 전부 bash script로 삭제하기
 
             $ for i in `seq 1 35`; do nsml model rm nsmlteam/ir_ph1_v2/$i "*" ; done
             $ nsml model ls nsmlteam/ir_ph1_v2/35
@@ -75,28 +100,3 @@ Step 2. 모델 삭제하기 & 확인하기
             21            29 minutes ago   24.942     epoch=2, loss=6.377185855899845  366.74 MB
             31            28 minutes ago   25.053     epoch=3, loss=5.742813685992816  366.74 MB
             41            28 minutes ago   24.971     epoch=4, loss=4.847646936640009  366.74 MB
-
-
-        .. code-block:: console
-            :caption: 정규표현식 *과 ?으로 여러 개 삭제하기
-
-            $ nsml model rm nsmlteam/ir_ph1_v2/4 *1
-            $ nsml model ls nsmlteam/ir_ph1_v2/4
-            Checkpoint    Last Modified    Elapsed    Summary                         Size
-            ------------  ---------------  ---------  -------------------------------  ---------
-            0             32 minutes ago   3.785      epoch=0, loss=7.015200052175436  366.74 MB
-            1             31 minutes ago   25.032     epoch=1, loss=6.762363957929182  366.74 MB
-            2             31 minutes ago   24.942     epoch=2, loss=6.377185855899845  366.74 MB
-            3             30 minutes ago   25.053     epoch=3, loss=5.742813685992816  366.74 MB
-            4             30 minutes ago   24.971     epoch=4, loss=4.847646936640009  366.74 MB
-
-        .. code-block:: console
-
-            $ nsml model rm nsmlteam/ir_ph1_v2/4 ?1
-            $ nsml model ls nsmlteam/ir_ph1_v2/4
-            Checkpoint    Last Modified    Elapsed    Summary                         Size
-            ------------  ---------------  ---------  -------------------------------  ---------
-            0             32 minutes ago   3.785      epoch=0, loss=7.015200052175436  366.74 MB
-            2             31 minutes ago   24.942     epoch=2, loss=6.377185855899845  366.74 MB
-            3             30 minutes ago   25.053     epoch=3, loss=5.742813685992816  366.74 MB
-            4             30 minutes ago   24.971     epoch=4, loss=4.847646936640009  366.74 MB

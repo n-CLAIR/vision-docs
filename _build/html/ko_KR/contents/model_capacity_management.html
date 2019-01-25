@@ -220,7 +220,34 @@
 <p>Example:</p>
 <blockquote>
 <div><div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">1개 세션에 있는 모델 모두 삭제하기</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">정규표현식 <a href="#id1"><span class="problematic" id="id2">*</span></a>으로 여러 개 삭제하기. 위 nsmlteam/ir_ph1_v2/4 세션에서 checkpoint가 1로 끝나는 모델 지우기</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model rm nsmlteam/ir_ph1_v2/4 *1
+<span class="gp">$</span> nsml model ls nsmlteam/ir_ph1_v2/4
+<span class="go">Checkpoint    Last Modified    Elapsed    Summary                         Size</span>
+<span class="go">------------  ---------------  ---------  -------------------------------  ---------</span>
+<span class="go">0             32 minutes ago   3.785      epoch=0, loss=7.015200052175436  366.74 MB</span>
+<span class="go">1             31 minutes ago   25.032     epoch=1, loss=6.762363957929182  366.74 MB</span>
+<span class="go">2             31 minutes ago   24.942     epoch=2, loss=6.377185855899845  366.74 MB</span>
+<span class="go">3             30 minutes ago   25.053     epoch=3, loss=5.742813685992816  366.74 MB</span>
+<span class="go">4             30 minutes ago   24.971     epoch=4, loss=4.847646936640009  366.74 MB</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">정규표현식 ?으로 여러 개 삭제하기. 위 nsmlteam/ir_ph1_v2/4 세션에서 1을 포함한 checkpoint가 1로 끝나는 모델 지우기</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model rm nsmlteam/ir_ph1_v2/4 ?1
+<span class="gp">$</span> nsml model ls nsmlteam/ir_ph1_v2/4
+<span class="go">Checkpoint    Last Modified    Elapsed    Summary                         Size</span>
+<span class="go">------------  ---------------  ---------  -------------------------------  ---------</span>
+<span class="go">0             32 minutes ago   3.785      epoch=0, loss=7.015200052175436  366.74 MB</span>
+<span class="go">2             31 minutes ago   24.942     epoch=2, loss=6.377185855899845  366.74 MB</span>
+<span class="go">3             30 minutes ago   25.053     epoch=3, loss=5.742813685992816  366.74 MB</span>
+<span class="go">4             30 minutes ago   24.971     epoch=4, loss=4.847646936640009  366.74 MB</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">해당 세션에 있는 모델 모두 삭제하기</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model rm nsmlteam/ir_ph1_v2/4 <span class="s2">&quot;*&quot;</span>
 <span class="gp">$</span> nsml model ls nsmlteam/ir_ph1_v2/4
 <span class="go">Checkpoint    Last Modified    Elapsed    Summary                         Size</span>
@@ -228,8 +255,8 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">1번부터 35번 session에 있는 model을 전부 bash script로 삭제하기</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">session에 있는 1번부터 35번 model을 전부 bash script로 삭제하기</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="k">for</span> i in <span class="sb">`</span>seq <span class="m">1</span> <span class="m">35</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span> nsml model rm nsmlteam/ir_ph1_v2/<span class="nv">$i</span> <span class="s2">&quot;*&quot;</span> <span class="p">;</span> <span class="k">done</span>
 <span class="gp">$</span> nsml model ls nsmlteam/ir_ph1_v2/35
 <span class="go">Checkpoint    Last Modified    Elapsed    Summary                         Size</span>
@@ -237,8 +264,8 @@
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">1개 삭제하기</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">1개 삭제하기</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model rm nsmlteam/ir_ph1_v2/4 <span class="m">0</span>
 <span class="gp">$</span> nsml model ls nsmlteam/ir_ph1_v2/4
 <span class="go">Checkpoint    Last Modified    Elapsed    Summary                         Size</span>
@@ -253,30 +280,6 @@
 <span class="go">41            28 minutes ago   24.971     epoch=4, loss=4.847646936640009  366.74 MB</span>
 </pre></div>
 </div>
-</div>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">정규표현식 <a href="#id1"><span class="problematic" id="id2">*</span></a>과 ?으로 여러 개 삭제하기</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model rm nsmlteam/ir_ph1_v2/4 *1
-<span class="gp">$</span> nsml model ls nsmlteam/ir_ph1_v2/4
-<span class="go">Checkpoint    Last Modified    Elapsed    Summary                         Size</span>
-<span class="go">------------  ---------------  ---------  -------------------------------  ---------</span>
-<span class="go">0             32 minutes ago   3.785      epoch=0, loss=7.015200052175436  366.74 MB</span>
-<span class="go">1             31 minutes ago   25.032     epoch=1, loss=6.762363957929182  366.74 MB</span>
-<span class="go">2             31 minutes ago   24.942     epoch=2, loss=6.377185855899845  366.74 MB</span>
-<span class="go">3             30 minutes ago   25.053     epoch=3, loss=5.742813685992816  366.74 MB</span>
-<span class="go">4             30 minutes ago   24.971     epoch=4, loss=4.847646936640009  366.74 MB</span>
-</pre></div>
-</div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> nsml model rm nsmlteam/ir_ph1_v2/4 ?1
-<span class="gp">$</span> nsml model ls nsmlteam/ir_ph1_v2/4
-<span class="go">Checkpoint    Last Modified    Elapsed    Summary                         Size</span>
-<span class="go">------------  ---------------  ---------  -------------------------------  ---------</span>
-<span class="go">0             32 minutes ago   3.785      epoch=0, loss=7.015200052175436  366.74 MB</span>
-<span class="go">2             31 minutes ago   24.942     epoch=2, loss=6.377185855899845  366.74 MB</span>
-<span class="go">3             30 minutes ago   25.053     epoch=3, loss=5.742813685992816  366.74 MB</span>
-<span class="go">4             30 minutes ago   24.971     epoch=4, loss=4.847646936640009  366.74 MB</span>
-</pre></div>
 </div>
 </div></blockquote>
 </div></blockquote>

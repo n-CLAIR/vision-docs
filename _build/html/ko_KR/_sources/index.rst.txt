@@ -26,6 +26,8 @@ Session and model
 
     NSML을 돌릴 때 local에서 만든 file(entry file 포함)에서 :ref:`nsml.save<nsml.save()>` 라는 함수를 사용할 때마다 checkpoint가 생성됩니다. 또는 세션이 진행되는 도중에 web interface에서 save 버튼을 누를 때마다 checkpoint가 생성됩니다.
 
+    1개의 ``session`` 별로 여러분은 GPU, CPU, RAM을 할당하실 수 있습니다. 이 자원들을 너무 많이 할당받아서 사용한다면 다른 사용자들이 사용할 수 없게 되므로 session status를 늘 확인하셔서 적절한 자원을 할당받아야 합니다. GPU를 할당받고 실행 중이지만 1시간 동안 사용량이 0인 GPU가 1개라도 존재하는 경우, 상태가 zombie로 표시됩니다. zombie 상태가 되지 않도록 주의해주시기 바랍니다. GPU를 다시 사용한다면 ``session`` 은 zombie 상태에서 벗어납니다.
+
 
 Prerequisites and User Interface
 ---------------------------------
