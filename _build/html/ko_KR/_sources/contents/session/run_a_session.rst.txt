@@ -29,7 +29,7 @@ Run a session
 
                                                GPU 사용량 rule은 :ref:`Policy<GPU policy>` 를 확인하시기 바랍니다.
 
-                                               ex) nsml run -g 4
+                                               ex) nsml run -g 2
 
         -i, --interactive                      세션의 훈련이 다 끝난 뒤에 세션은 자동으로 삭제됩니다.
 

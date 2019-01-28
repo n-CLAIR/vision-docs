@@ -30,19 +30,6 @@ Dataset Policy
 GPU credit rule
 ------------------
 
-    한 유저가 동시에 실행 가능한 GPU의 최대 개수는 남은 credit에 따라 달라집니다.
+    한 유저가 동시에 실행 가능한 GPU MAX 개수는 2 ~ 12개로 정해져있고, 이는 리소스 상황에 따라 계속 변경됩니다.
 
-    **<credit 제공 rule>**
-      한 팀에 1시간 단위로 120 credit이 주어집니다. 2880 credit을 max로 사용하실 수 있고, 2880 credit이 채워지면 더 이상 credit이 주어지지 않습니다.
-
-
-
-    **<credit 차감 rule>**
-      1분에 1 gpu를 사용할 경우 1 credit이 소모됩니다.
-
-      예)
-          - 1 gpu를 5분 동안 사용할 경우 : 5 credit 소모
-
-          - 3 gpu를 1분 동안 사용할 경우 : 3 credit 소모
-
-          - 3 gpu를 5분 동안 사용할 경우 : 15 credit 소모
+    GPU MAX값이 줄어도 이미 시작된 session에는 영향을 주지 않습니다.

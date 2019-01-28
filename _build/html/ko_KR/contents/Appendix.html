@@ -198,23 +198,8 @@
 <div class="section" id="gpu-credit-rule">
 <span id="gpu-policy"></span><h2>GPU credit rule<a class="headerlink" href="#gpu-credit-rule" title="제목 주소">¶</a></h2>
 <blockquote>
-<div><p>한 유저가 동시에 실행 가능한 GPU의 최대 개수는 남은 credit에 따라 달라집니다.</p>
-<dl class="docutils">
-<dt><strong>&lt;credit 제공 rule&gt;</strong></dt>
-<dd>한 팀에 1시간 단위로 120 credit이 주어집니다. 2880 credit을 max로 사용하실 수 있고, 2880 credit이 채워지면 더 이상 credit이 주어지지 않습니다.</dd>
-<dt><strong>&lt;credit 차감 rule&gt;</strong></dt>
-<dd><p class="first">1분에 1 gpu를 사용할 경우 1 credit이 소모됩니다.</p>
-<dl class="last docutils">
-<dt>예)</dt>
-<dd><ul class="first last simple">
-<li>1 gpu를 5분 동안 사용할 경우 : 5 credit 소모</li>
-<li>3 gpu를 1분 동안 사용할 경우 : 3 credit 소모</li>
-<li>3 gpu를 5분 동안 사용할 경우 : 15 credit 소모</li>
-</ul>
-</dd>
-</dl>
-</dd>
-</dl>
+<div><p>한 유저가 동시에 실행 가능한 GPU MAX 개수는 2 ~ 12개로 정해져있고, 이는 리소스 상황에 따라 계속 변경됩니다.</p>
+<p>GPU MAX값이 줄어도 이미 시작된 session에는 영향을 주지 않습니다.</p>
 </div></blockquote>
 </div>
 </div>
