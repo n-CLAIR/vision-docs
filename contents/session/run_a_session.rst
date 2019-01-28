@@ -43,7 +43,7 @@ Run a session
 
         -a, --args string                      main entry 파일의 arguments 를 전달합니다.
 
-                                               ex) nsml run -a "--batch=1000, --lr=0.02"
+                                               ex) nsml run -a "--batch 1000 --lr 0.02"
 
         -c, --cpus string_or_integer           사용할 cpu 갯수입니다. ex) nsml run -c 5
 
